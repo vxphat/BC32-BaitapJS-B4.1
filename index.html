@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+    <!-- BS 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+    <div class="session py-5">
+        <div class="content py-5 section ">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-bai-1-tab" data-bs-toggle="tab" data-bs-target="#nav-bai-1"
+                        type="button" role="tab" aria-controls="nav-bai-1" aria-selected="true">Bài 1</button>
+                    <button class="nav-link" id="nav-bai-2-tab" data-bs-toggle="tab" data-bs-target="#nav-bai-2"
+                        type="button" role="tab" aria-controls="nav-bai-2" aria-selected="false">Bài 2</button>
+                    <button class="nav-link" id="nav-bai-3-tab" data-bs-toggle="tab" data-bs-target="#nav-bai-3"
+                        type="button" role="tab" aria-controls="nav-bai-3" aria-selected="false">Bài 3</button>
+                    <button class="nav-link" id="nav-bai-4-tab" data-bs-toggle="tab" data-bs-target="#nav-bai-4"
+                        type="button" role="tab" aria-controls="nav-bai-4" aria-selected="false">Bài 4</button>
+                    <!-- <button class="nav-link" id="nav-bai-5-tab" data-bs-toggle="tab" data-bs-target="#nav-bai-5"
+                        type="button" role="tab" aria-controls="nav-bai-5" aria-selected="false">Bài 5</button> -->
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-bai-1" role="tabpanel" aria-labelledby="nav-bai-1-tab"
+                    tabindex="0">
+                    <h4 class="mt-4">Viết chương trình nhập vào ngày tháng năm. Tìm ngày tháng năm của ngày tiếp theo.
+                        Tương tự tìm ngày tháng năm của ngày trước đó</h4>
+                    <div class="moTa">
+                        <!-- <p>Mô tả: Lương = Lương 1 ngày * số ngày làm</p> -->
+                    </div>
+                    <br>
+                    <div class="xuLy d-flex">
+                        <input type="number" class="form-control w-25 me-4" id="ngay-1" placeholder="Nhập ngày">
+                        <input type="number" class="form-control w-25 me-4" id="thang-1" placeholder="Nhập tháng">
+                        <input type="number" class="form-control w-25" id="nam-1" placeholder="Nhập năm">
+                    </div>
+                    <div class="d-flex">
+                        <button id="btnPreviewDay" onclick="previewDay()" type="submit" class="btn btn-primary text-white my-4 me-4">Ngày hôm trướcc</button>
+                        <button id="btnNextDay" onclick="nextDay()" type="submit" class="btn btn-primary text-white my-4 me-4">Ngày hôm sau</button>
+                    </div>
+                    <div class="ketQua">
+                        <span class="form-control alert alert-success">👉<span id="ketQua-b1"></span></span>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-bai-2" role="tabpanel" aria-labelledby="nav-bai-2-tab" tabindex="0">
+                    <h4 class="mt-4">Viết chương trình nhập vào tháng năm. Cho biết tháng đó có bao nhiêu ngày</h4>
+                    <br>
+                    <div class="xuLy d-flex">
+                        <input type="number" class="form-control w-25 me-4" id="thang-2" placeholder="Nhập tháng">
+                        <input type="number" class="form-control w-25 me-4" id="nam-2" placeholder="Nhập năm">
+                        
+                        <button id="btnTinhNgay" onclick="checkMonth()" type="submit" class="btn btn-primary text-white">Tính ngày</button>
+                    </div>
+                    <br>
+                    <div class="ketQua">
+                        <span class="form-control alert alert-success">👉<span id="ketQua-b2"></span></span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-bai-3" role="tabpanel" aria-labelledby="nav-bai-3-tab" tabindex="0">
+                    <h4 class="mt-4">Viết chương trình nhập vào số nguyên có 3 chữ số. In ra cách đọc nó</h4>
+                    <br>
+                    <div class="xuLy d-flex">
+                        <input type="text" class="form-control w-50 me-4" id="num3-1" placeholder="Nhập vào số có 3 chữ số">
+                        
+                    </div>
+                    <button id="btnDemSo" onclick="DocSo()" type="submit" class="btn btn-primary text-white my-4">Đọc số</button>
+                    <div class="ketQua">
+                        <span class="form-control alert alert-success">👉<span id="ketQua-b3"></span></span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-bai-4" role="tabpanel" aria-labelledby="nav-bai-4-tab" tabindex="0">
+                    <h4 class="mt-4">Đoán hình tam giác</h4>
+                    <div class="moTa">
+                        <p>Mô tả: Chỉ cần xác định các loại tam giác cơ bản (vuông, đều, cân), các tam giác còn lại xếp
+                            loại là tam giác khác.
+                        </p>
+                    </div>
+                    <div class="xuLy d-flex">
+                        <input type="text" class="form-control w-50 me-4" id="canh-a" placeholder="Nhập độ dài cạnh 1">
+                        <input type="text" class="form-control w-50 me-4" id="canh-b" placeholder="Nhập độ dài cạnh 2">
+                        <input type="text" class="form-control w-50 me-4" id="canh-c" placeholder="Nhập độ dài cạnh 3">
+                    </div>
+                    <button id="btnDoanTamGiac" type="submit" class="btn btn-primary text-white my-4">Dự đoán</button>
+
+                    <div class="ketQua">
+                        <span class="form-control alert alert-success w-50">👉<span id="ketQua-b4"></span></span>
+
+                    </div>
+                </div>
+                <!-- <div class="tab-pane fade" id="nav-bai-5" role="tabpanel" aria-labelledby="nav-bai-5-tab" tabindex="0">
+                    <h4 class="mt-4">Tính tổng 2 ký số</h4>
+                    <div class="moTa">
+                        <p>Mô tả: Tính tổng 2 ký số khi nhập vào
+                        </p>
+                    </div>
+                    <div class="xuLy d-flex">
+                        <input type="text" class="form-control w-25 me-4" id="kySo" placeholder="Nhập số có 2 chữ số">
+                    </div>
+                    <button id="btnTinhTongKySo" type="submit" class="btn btn-primary text-white my-4">Tính
+                        tổng</button>
+                    <div class="ketQua">
+                        <span class="form-control alert alert-success">👉<span id="ketQua-b5"></span></span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
