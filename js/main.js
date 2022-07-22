@@ -172,10 +172,10 @@ function checkyear(year2){
 // Bài 3: Đọc số
 function DocSo(){
     var num3 = +document.getElementById('num3-1').value;
-    var hangTram,
-     hangChuc,
-     hangDV,
-     show = "";
+    var hangTram = Math.floor(num3/100);
+    var hangChuc = Math.floor(num3%100/10);
+    var hangDV =num3%10;
+    var show = "";
     var kq = document.getElementById('ketQua-b3');
     
     var num1 = "Một";
@@ -189,13 +189,10 @@ function DocSo(){
     var num9 = "Chín"
 
     if (num3 < 100 || num3 > 999){
-        kq.innerHTML = "Số nhập vào lớn hơn 3 chữ số"
+        kq.innerHTML = 'Số nhập vào lớn hơn 3 chữ số'
     }
 
-    hangTram = Math.floor(num3/100);
-    hangChuc = Math.floor(num3%100/10);
-    hangDV = num3%10;
-
+    //Đọc hàng trăm
     switch(hangTram){
         case 1:
             show += num1 + " Trăm "
@@ -246,7 +243,7 @@ function DocSo(){
     }else if(hangChuc === 9){
         show += num9 + " Mươi "
     }else{
-        show += " Lẻ";
+        show += " Lẻ ";
     }
     
     //Đọc hàng đơn vị
@@ -277,3 +274,5 @@ function DocSo(){
     kq.innerHTML = show;
 
 }
+
+//Bài tập 4: 
