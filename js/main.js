@@ -291,7 +291,7 @@ function timSV(){
     var x4 = +document.getElementById('x4').value;
     var y4 = +document.getElementById('y4').value;
 
-    var tongsv1, tongsv2, tongsv2, tongTH = 0;
+    var tongsv1, tongsv2, tongsv2, tongth = 0;
     tongsv1 = x1 + y1;
     tongsv2 = x2 + y2;
     tongsv3 = x3 + y3;
