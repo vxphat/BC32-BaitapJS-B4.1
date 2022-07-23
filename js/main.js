@@ -188,9 +188,6 @@ function DocSo(){
     var num8 = "Tám"
     var num9 = "Chín"
 
-    if (num3 < 100 || num3 > 999){
-        kq.innerHTML = 'Số nhập vào lớn hơn 3 chữ số'
-    }
 
     //Đọc hàng trăm
     switch(hangTram){
@@ -272,7 +269,54 @@ function DocSo(){
     }
 
     kq.innerHTML = show;
-
 }
 
-//Bài tập 4: 
+//Bài tập 4: Tìm sinh viên có tọa độ xa trường nhất
+
+function timSV(){
+    var nameSV1 = document.getElementById('nameSV1').value;
+    var nameSV2 = document.getElementById('nameSV2').value;
+    var nameSV3 = document.getElementById('nameSV3').value;
+
+    //Tọa độ sv 1
+    var x1 = +document.getElementById('x1').value;
+    var y1 = +document.getElementById('y1').value;
+    //Tọa độ sv 2
+    var x2 = +document.getElementById('x2').value;
+    var y2 = +document.getElementById('y2').value;
+    //Tọa độ sv 3
+    var x3 = +document.getElementById('x3').value;
+    var y3 = +document.getElementById('y3').value;
+    //Tọa độ trường học
+    var x4 = +document.getElementById('x4').value;
+    var y4 = +document.getElementById('y4').value;
+
+    var tongsv1, tongsv2, tongsv2, tongTH = 0;
+    tongsv1 = x1 + y1;
+    tongsv2 = x2 + y2;
+    tongsv3 = x3 + y3;
+    tongth = x4 + y4;
+    console.log(tongsv1,tongsv2,tongsv3,tongth)
+    var dmax1 = tongsv1 - tongth;
+    var dmax2 = tongsv2 - tongth;
+    var dmax3 = tongsv3 - tongth;
+    console.log(dmax1,dmax2,dmax3)
+    var kq = document.getElementById('ketQua-b4');
+
+    // Ví dụ: dmax1 = 15 - 10 = 5
+    //         dmax2 = 12 - 10 = 2
+    //         dmax3 = 13 - 10 = 3
+    //     => sv 1 xa trường nhất
+    
+    //trừ quảng đường giữa từng sv với trường học. Nếu quảng đường sau khi trừ lớn nhất thì sv đó xa nhất
+
+    if(dmax1 > dmax2 && dmax1 > dmax3){
+        kq.innerHTML = 'Sinh viên ' + nameSV1 + ' xa trường nhất'
+    }else if (dmax2 > dmax1 && dmax2 > dmax3){
+        kq.innerHTML = 'Sinh viên ' + nameSV2 + ' xa trường nhất'
+    }else{
+        kq.innerHTML = 'Sinh viên ' + nameSV3 + ' xa trường nhất'
+    }
+
+
+}

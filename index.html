@@ -80,18 +80,35 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-bai-4" role="tabpanel" aria-labelledby="nav-bai-4-tab" tabindex="0">
-                    <h4 class="mt-4">Đoán hình tam giác</h4>
-                    <div class="moTa">
-                        <p>Mô tả: Chỉ cần xác định các loại tam giác cơ bản (vuông, đều, cân), các tam giác còn lại xếp
-                            loại là tam giác khác.
-                        </p>
+                    <h4 class="mt-4">Viết chương trình in tên sinh viên xa trường nhất</h4>
+                   <br>
+                   <p>Sinh viên 1</p>
+                    <div class="sv1 d-flex">
+                        <input type="text" class="form-control w-50 me-4" id="nameSV1" placeholder="Nhập tên sinh viên 1">
+                        <input type="number" class="form-control w-50 me-4" id="x1" placeholder="Nhập tọa độ x">
+                        <input type="number" class="form-control w-50 me-4" id="y1" placeholder="Nhập tọa độ y">
                     </div>
-                    <div class="xuLy d-flex">
-                        <input type="text" class="form-control w-50 me-4" id="canh-a" placeholder="Nhập độ dài cạnh 1">
-                        <input type="text" class="form-control w-50 me-4" id="canh-b" placeholder="Nhập độ dài cạnh 2">
-                        <input type="text" class="form-control w-50 me-4" id="canh-c" placeholder="Nhập độ dài cạnh 3">
+                    <br>
+                    <p>Sinh viên 2</p>
+                    <div class="sv2 d-flex">
+                        <input type="text" class="form-control w-50 me-4" id="nameSV2" placeholder="Nhập tên sinh viên 2">
+                        <input type="number" class="form-control w-50 me-4" id="x2" placeholder="Nhập tọa độ x">
+                        <input type="number" class="form-control w-50 me-4" id="y2" placeholder="Nhập tọa độ y">
                     </div>
-                    <button id="btnDoanTamGiac" type="submit" class="btn btn-primary text-white my-4">Dự đoán</button>
+                    <br>
+                    <p>Sinh viên 3</p>
+                    <div class="sv3 d-flex">
+                        <input type="text" class="form-control w-50 me-4" id="nameSV3" placeholder="Nhập tên sinh viên 3">
+                        <input type="number" class="form-control w-50 me-4" id="x3" placeholder="Nhập tọa độ x">
+                        <input type="number" class="form-control w-50 me-4" id="y3" placeholder="Nhập tọa độ y">
+                    </div>
+                    <br>
+                    <p>Trường học</p>
+                    <div class="school d-flex">
+                        <input type="number" class="form-control w-25 me-4" id="x4" placeholder="Nhập tọa độ x">
+                        <input type="number" class="form-control w-25 me-4" id="y4" placeholder="Nhập tọa độ y">
+                    </div>
+                    <button id="btnTim" onclick="timSV()" type="submit" class="btn btn-primary text-white my-4">Tìm</button>
 
                     <div class="ketQua">
                         <span class="form-control alert alert-success w-50">👉<span id="ketQua-b4"></span></span>
